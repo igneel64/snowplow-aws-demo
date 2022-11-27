@@ -1,0 +1,208 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Snowplow Blog!</title>
+		<meta name="author" content="name">
+    <meta name="description" content="description here">
+		<meta name="keywords" content="keywords,here">
+		    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"/> <!--Replace with your tailwind.css once created-->
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" rel="stylesheet">
+	<style>
+	.smooth {transition: box-shadow 0.3s ease-in-out;}
+	::selection{background-color: aliceblue}
+	</style>
+	<script>
+		;(function(p,l,o,w,i,n,g){if(!p[i]){p.GlobalSnowplowNamespace=p.GlobalSnowplowNamespace||[]; p.GlobalSnowplowNamespace.push(i);p[i]=function(){(p[i].q=p[i].q||[]).push(arguments) };p[i].q=p[i].q||[];n=l.createElement(o);g=l.getElementsByTagName(o)[0];n.async=1; n.src=w;g.parentNode.insertBefore(n,g)}}(window,document,"script","https://cdn.jsdelivr.net/npm/@snowplow/javascript-tracker@3.7.0/dist/sp.min.js","snowplow"));
+		window.snowplow('newTracker', 'sp1', 'https://com-snplow-sales-aws-prod1.collector.snplow.net', { 
+		   appId: 'demo',
+		   eventMethod: 'get'
+	   });
+	   window.snowplow('trackPageView');
+	   window.snowplow('enableFormTracking');
+   </script>
+</head>
+<body class="bg-white font-sans leading-normal tracking-normal">
+
+	<!--Nav-->
+	<nav class="bg-gray-900 p-4 mt-0 w-full">
+        <div class="container mx-auto flex items-center">
+		    <div class="flex text-white font-extrabold">
+				<a class="flex text-white text-base no-underline hover:text-white hover:no-underline" href="/"> 
+					👻 <span class="hidden w-0 md:w-auto md:block pl-1">Snowplow Blog</span>
+				</a>
+            </div>
+			<div class="flex pl-4 text-sm">
+				<ul class="list-reset flex justify-between flex-1 md:flex-none items-center">
+				  <li>
+					<a class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:underline py-2 px-3" href="https://snowplow.io/">Snowplow</a>
+				  </li>
+				  <li>
+					<a class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:underline py-2 px-3" href="https://snowplow.io/blog/">Blog</a>
+				  </li>
+					<li>
+					<a class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:underline py-2 px-3" href="https://try.snowplowanalytics.com/">Try it!</a>
+				  </li>
+				</ul>
+			</div>
+        </div>
+	</nav>
+	
+	<!--slide in nav-->
+	<div id="header" class="bg-white fixed w-full z-10 top-0 hidden animated" style="opacity: .95;">
+		<div class="bg-white">
+			<div class="flex flex-wrap items-center content-center">
+				<div class="flex w-1/2 justify-start text-white font-extrabold">
+					<a class="flex text-gray-900 no-underline hover:text-gray-900 hover:no-underline pl-2" href="#">
+						👻 <span class="hidden w-0 md:w-auto md:block pl-1">Snowplow Blog</span>
+					</a>
+				</div>
+				<div class="flex w-1/2 justify-end content-center">		
+					  <p class="hidden sm:block mr-3 text-center h-14 p-4 text-xs"><span class="pr-2">Social</span> 👉</p>
+						<a class="inline-block text-white no-underline hover:text-white hover:text-underline text-center h-10 w-10 p-2 md:h-auto md:w-16 md:p-4" href="https://twitter.com/snowplow" style="background-color:#33b1ff;">
+							<svg class="fill-current text-white h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"></path></svg>
+						</a>
+						<a class="inline-block text-white no-underline hover:text-white hover:text-underline text-center h-10 w-10 p-2 md:h-auto md:w-16 md:p-4" href="https://www.facebook.com/Snowplow.io/" style="background-color:#005e99">
+							<svg class="fill-current text-white h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"></path></svg>
+						</a>
+				</div>
+			</div>
+			
+		</div>
+		<!--Progress bar-->
+		<div id="progress" class="h-1 bg-white shadow" style="background:linear-gradient(to right, #4dc0b5 var(--scroll), transparent 0);"></div>
+    </div>
+	
+	
+	<!--Title-->
+	<div class="text-center pt-16 md:pt-32 mr-32 ml-32">
+		<p class="text-sm md:text-base font-bold" style="color:#9e62dd;">28 November 2022 <span class="text-gray-900">/</span> PRODUCT</p>
+		<h1 class="font-bold break-normal text-3xl md:text-3xl">Need to replace Google Analytics to comply with data privacy regulations? Why it could be a blessing in disguise.</h1>
+	</div>
+
+	<!--image-->
+	<div class="container w-full max-w-6xl mx-auto bg-white bg-cover mt-8 rounded" style="background-image:url('https://snowplow.io/wp-content/uploads/2022/09/Frame-59.png'); height: 65vh;"></div>
+	
+	<!--Container-->
+	<div class="container max-w-5xl mx-auto -mt-32">
+		
+		<div class="mx-0 sm:mx-6">
+			
+			<div class="bg-white w-full p-8 md:p-24 text-xl md:text-2xl text-gray-800 leading-normal" style="font-family:Georgia,serif;">
+				<p class="text-2xl md:text-3xl mb-5">
+					Across Europe and the United States, companies and countries are <a class="text-gray-800 no-underline border-b-2" style="border-color:#9e62dd;" href="https://snowplow.io/navigating-compliance/">increasingly focused on data compliance and privacy</a>. Whether it’s because customers are increasingly aware of how brands use their data, or regulatory bodies are significantly increasing scrutiny and banning Google Analytics in some countries, it’s never been more important for organizations to consider how data compliance and ongoing data management form a critical part of their business and data strategy.
+				</p>
+
+				<p class="py-6">The data privacy regulatory landscape is evolving before our eyes. Momentum is building towards increased data privacy scrutiny by governments and regulators across Europe and in the United States. Much of the current focus is on Google Analytics – a data analytics tool widely used to understand top-level site performance metrics. Organizations must understand what’s happening, the implications for them, and what data strategies they can implement to remain compliant with changing regulations while continuing to improve the quality of their data analytics.</p>				
+			
+				<p class="py-6">In January, Austria’s Data Protection Authority (DPA) announced a decision on the use of Google Analytics, finding that Google’s encryption and anonymization measures for data collected and sent to the US were inadequate. Similar rulings followed in France, the Netherlands, and Italy. With its announcement on 22 September 2022, Denmark became the latest country to act on this issue, with its data regulator ruling Google Analytics illegal as it lets organizations move users’ data outside the EU without the necessary protections.</p>
+
+				<ol>
+					<li class="py-3">Meanwhile, in the US, we’re only months away from the California Privacy Rights Act (CPRA) coming into effect. Amongst other consumer protections, this law emphasizes data privacy obligations to all third parties dealing with businesses. From January, examining third-party vendors will become mandatory for all organizations.</li>
+					<li class="py-3">Considering the Danish data privacy directive on Google Analytics, the message is that users must put in place a plan to bring their use of compliance to the forefront of their data privacy provisions by implementing additional measures.</li>
+					<li class="py-3">When using Google Analytics, one potential technical remedy proposed by the French Data Protection Authority (CNIL) is pseudonymization. The CNIL has created detailed guidance for organizations wishing to explore effective pseudonymization by means of a so-called reverse proxy.</li>
+				</ol>
+
+				<blockquote class="border-l-4 border-green-500 italic my-8 pl-8 md:pl-12">In fact, Alex Baskin, the Head of Analytics at Animoto shared that, “For us, Snowplow event tracking has replaced Google Analytics, as GA cannot do everything we need, or even a fraction of what we need, such as easily tying data to individual users.”.</blockquote>
+				<!--/ Post Content-->
+						
+			</div>
+			
+			
+				<!--Subscribe-->	
+				<div class="container font-sans rounded mt-8 mb-8 p-4 md:p-24 text-center" style="background-color: #9e62dd;">
+					<h2 class="font-bold break-normal text-2xl md:text-4xl text-white">Subscribe to Snowplow Analytics</h2>
+					<h3 class="font-bold break-normal font-normal text-white text-base md:text-xl">Get the latest posts delivered right to your inbox</h3>
+					<div class="w-full text-center pt-4">
+						<form action="#" id="sub">
+							<div class="max-w-xl mx-auto p-1 pr-0 flex flex-wrap items-center">
+								<input type="email" placeholder="youremail@example.com" class="flex-1 appearance-none rounded shadow p-3 text-gray-600 mr-2 focus:outline-none">
+								<button type="submit" class="flex-1 mt-4 md:mt-0 block md:inline-block appearance-none text-white text-base font-semibold tracking-wider uppercase py-4 rounded shadow" style="background-color: #FC5E36;">Subscribe</button>
+							</div>
+						</form>
+					</div>
+				</div>	
+				<!-- /Subscribe-->
+			
+		</div>
+	
+
+	</div>
+	<footer class="bg-gray-900">	
+		<div class="container max-w-6xl mx-auto flex items-center px-2 py-8">
+
+			<div class="w-full mx-auto flex flex-wrap items-center">
+				<div class="flex w-full md:w-1/2 justify-center md:justify-start text-white font-extrabold">
+					<a class="text-gray-900 no-underline hover:text-gray-900 hover:no-underline" href="#">
+						👻 <span class="text-base text-gray-200">Snowplow Blog</span>
+					</a>
+				</div>
+				<div class="flex w-full pt-2 content-center justify-between md:w-1/2 md:justify-end">
+					<ul class="list-reset flex justify-center flex-1 md:flex-none items-center">
+					  <li>
+						<a class="inline-block py-2 px-3 text-white no-underline" href="#">Back to top</a>
+					  </li>
+					  <li>
+						<a class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:underline py-2 px-3" href="https://snowplow.io/">Snowplow</a>
+					  </li>
+					  <li>
+						<a class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:underline py-2 px-3" href="https://snowplow.io/blog/">Blog</a>
+					  </li>
+						<li>
+						<a class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:underline py-2 px-3" href="https://try.snowplowanalytics.com/">Try it!</a>
+					  </li>
+					</ul>
+				</div>
+			</div>		
+		</div>
+	</footer>
+
+
+<script>
+	/* Progress bar */
+	//Source: https://alligator.io/js/progress-bar-javascript-css-variables/
+	var h = document.documentElement,
+		  b = document.body,
+		  st = 'scrollTop',
+		  sh = 'scrollHeight',
+		  progress = document.querySelector('#progress'),
+		  scroll;
+	var scrollpos = window.scrollY;
+	var header = document.getElementById("header");
+
+	document.addEventListener('scroll', function() {
+
+		/*Refresh scroll % width*/
+		scroll = (h[st]||b[st]) / ((h[sh]||b[sh]) - h.clientHeight) * 100;
+		progress.style.setProperty('--scroll', scroll + '%');
+
+		/*Apply classes for slide in bar*/
+		scrollpos = window.scrollY;
+
+    if(scrollpos > 100){
+      header.classList.remove("hidden");
+	  header.classList.remove("fadeOutUp");
+	  header.classList.add("slideInDown");
+    }
+    else {
+	  header.classList.remove("slideInDown");
+      header.classList.add("fadeOutUp");
+	  header.classList.add("hidden");
+    }
+
+	});
+
+</script>
+<script>
+	(function snowplowCta(){
+		document.getElementById("sub").addEventListener("submit", function(e){
+			e.preventDefault();
+			e.currentTarget.querySelector("input").value = '';
+		});
+	})();
+</script>
+</body>
+</html>
